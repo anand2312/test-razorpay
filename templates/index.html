@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay testing</title>
+</head>
+<body>
+    <form method="POST">
+        <label for="product">Product:</label>
+        <select id="product" name="product">
+            <option value="apple">Apple</option>
+            <option value="pear">Pear</option>
+            <option value="orange">Orange</option>
+        </select>
+
+        <label for="qty">Qty:</label>
+        <input type="number" id="qty" name="qty">
+
+        <button formaction="/payment/process" type="submit">Buy</button>
+    </form>
+</body>
+</html>

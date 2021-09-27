@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay testing</title>
+</head>
+<body>
+    <button id="rzp-button1">Pay</button>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+    var options = {
+        "key": "rzp_test_3ksgbFSQXnHabf", // Enter the Key ID generated from the Dashboard
+        "amount": "{{ amount }}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        "currency": "INR",
+        "name": "Shop corp",
+        "description": "Test Transaction",
+        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40maildineshpg%2Frupee-the-dotted-problem-of-print-6bd72b7a2cff&psig=AOvVaw3JoA2RPRSeSc9_qvW_gT16&ust=1632819354411000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCODUkqHknvMCFQAAAAAdAAAAABAD",
+        "order_id": "{{ order_id }}",
+        "callback_url": "http://localhost:8000/payment/success",
+        "prefill": {
+            "name": "Gaurav Kumar",
+            "email": "gaurav.kumar@example.com",
+            "contact": "9999999999"
+        },
+        "notes": {
+            "address": "Razorpay Corporate Office"
+        },
+        "theme": {
+            "color": "#3399cc"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+    </script>
+</body>
+</html>
