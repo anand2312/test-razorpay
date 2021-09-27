@@ -12,3 +12,12 @@ Testing out the Razorpay payment gateway interface, by using it's Python SDK alo
 
 
 You should ideally also keep track of order IDs by yourself on the server side, but that isn't covered here.
+
+## Project test
+Clone the repository, `cd` into it
+
+Download test API keys from your razorpay dashboard and add them to a `.env` file with the keys `KEY_ID` and `KEY_SECRET`
+
+Run `poetry install`
+
+Run `poetry run uvicorn app:app --reload`
