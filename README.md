@@ -1,5 +1,7 @@
 # Testing Razorpay
 
+![Preview](https://kxrfsnhxqitzsegngyki.supabase.in/storage/v1/object/public/uploads/rpay-demo.gif)
+
 Testing out the Razorpay payment gateway interface, by using it's Python SDK along with FastAPI.
 
 ## Steps
